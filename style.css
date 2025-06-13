@@ -1,0 +1,149 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #d4d3dd, #efefbb);
+  color: #333;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Timer */
+.timer-section {
+  margin-bottom: 30px;
+}
+
+#time {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+/* Sounds */
+.sound-controls button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Notes */
+#notes-popup {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  width: 300px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#notes-area {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Quote */
+.quote-box {
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.floating-bg .float {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: floatUp 15s linear infinite;
+}
+
+.floating-bg .float:nth-child(1) {
+  left: 20%;
+  animation-delay: 0s;
+}
+.floating-bg .float:nth-child(2) {
+  left: 40%;
+  animation-delay: 3s;
+}
+.floating-bg .float:nth-child(3) {
+  left: 60%;
+  animation-delay: 6s;
+}
+.floating-bg .float:nth-child(4) {
+  left: 80%;
+  animation-delay: 9s;
+}
+.floating-bg .float:nth-child(5) {
+  left: 30%;
+  animation-delay: 12s;
+}
+
+@keyframes floatUp {
+  0% {
+    bottom: -50px;
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(30px) scale(1.2);
+  }
+  100% {
+    bottom: 100%;
+    transform: translateX(-20px) scale(0.8);
+  }
+}
+
+.goal-section {
+  margin-top: 30px;
+}
+
+input#goal-minutes {
+  padding: 5px;
+  width: 200px;
+  margin: 10px;
+}
+
+.progress-container {
+  width: 80%;
+  margin: 10px auto;
+  background: #ddd;
+  border-radius: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  transition: width 0.4s ease;
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Study Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="floating-bg">
+    <span class="float"></span>
+    <span class="float"></span>
+    <span class="float"></span>
+    <span class="float"></span>
+    <span class="float"></span>
+  </div>
+
+  <!-- ⏱️ Pomodoro Timer -->
+  <section class="timer-section">
+    <h1 class="title">🧠 Virtual Study Room</h1>
+    <div id="timer">
+      <h2 id="time">25:00</h2>
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎧 Ambient Sounds -->
+  <section class="sounds">
+    <h3>🎧 Ambient Sounds</h3>
+    <div class="sound-controls">
+      <button onclick="toggleSound('rain')">🌧 Rain</button>
+      <button onclick="toggleSound('coffee')">☕ Coffee Shop</button>
+      <button onclick="toggleSound('lofi')">🎶 Lofi</button>
+    </div>
+  </section>
+
+  <!-- ✍️ Notes -->
+  <section class="notes">
+    <button id="open-notes">📝 Notes</button>
+    <div id="notes-popup" class="hidden">
+      <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
+      <button id="save-notes">Save</button>
+      <button id="close-notes">Close</button>
+      <button id="export-notes">Export Notes</button>
+    </div>
+  </section>
+
+
+<section class="goal-section">
+  <h3>🎯 Daily Goal Tracker</h3>
+  <input type="number" id="goal-minutes" placeholder="Set goal in minutes (e.g. 90)">
+  <button id="set-goal">Set Goal</button>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+  <p id="progress-text">Progress: 0%</p>
+</section>
+
+
+
+
+  <!-- 💬 Daily Quote -->
+  <section class="quote-box">
+    <p id="quote-text">Loading quote...</p>
+    
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
